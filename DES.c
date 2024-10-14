@@ -281,10 +281,9 @@ uint64_t des(uint64_t input, uint64_t key, char mode) {
 
         /* 
          * Criptografia/Descriptografia
-         * Operação de XOR entre Ri e Ki
+         * Operação de XOR entre Ri expandido e Ki
         */
-
-        
+    
         if (mode == 'd') {
             // Descriptografia: ordem inversa das chaves
             s_input = s_input ^ sub_key[15-i];
